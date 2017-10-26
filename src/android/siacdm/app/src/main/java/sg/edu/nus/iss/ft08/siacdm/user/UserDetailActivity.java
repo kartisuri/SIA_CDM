@@ -26,6 +26,7 @@ public class UserDetailActivity extends SiaCdmBaseActivity {
   private EditText txtUserID;
   private EditText txtFullName;
   private EditText txtPassword;
+  private EditText txtPhone;
   private TextView txtSlots;
   private AppCompatCheckBox chkTechnician;
   private AppCompatCheckBox chkSupervisor;
@@ -62,6 +63,7 @@ public class UserDetailActivity extends SiaCdmBaseActivity {
     txtUserID = (EditText) v.findViewById(R.id.user_ID_txt);
     txtFullName = (EditText) v.findViewById(R.id.user_full_name);
     txtPassword = (EditText) v.findViewById(R.id.user_password);
+    txtPhone = (EditText) v.findViewById(R.id.user_phone);
     chkSupervisor = (AppCompatCheckBox) v.findViewById(R.id.supervisor_checkbox);
     chkSystemAdmin = (AppCompatCheckBox) v.findViewById(R.id.systemadmin_checkbox);
     chkTechnician = (AppCompatCheckBox) v.findViewById(R.id.technician_checkbox);
@@ -80,6 +82,7 @@ public class UserDetailActivity extends SiaCdmBaseActivity {
       txtUserID.setText(current.getUserId());
       txtFullName.setText(current.getFullName());
       txtPassword.setText(current.getPassword());
+      txtPhone.setText(current.getPhone());
       txtSlots.setText(Integer.toString(current.getAssignedSlot()));
       for (Role role : current.getRoles()) {
         if (role.getRole_id().equals("admin")) {
@@ -145,6 +148,7 @@ public class UserDetailActivity extends SiaCdmBaseActivity {
       newRecord.setUserId(txtUserID.getText().toString());
       newRecord.setFullName(txtFullName.getText().toString());
       newRecord.setPassword(txtPassword.getText().toString());
+      newRecord.setPhone(txtPhone.getText().toString());
       newRecord.setRoles(roles);
       boolean cancel = false;
       View focusView = null;
@@ -167,6 +171,7 @@ public class UserDetailActivity extends SiaCdmBaseActivity {
       current.setUserId(txtUserID.getText().toString());
       current.setFullName(txtFullName.getText().toString());
       current.setPassword(txtPassword.getText().toString());
+      current.setPhone(txtPhone.getText().toString());
       current.setRoles(roles);
       View focusView = null;
       boolean cancel = false;

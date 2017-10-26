@@ -33,7 +33,8 @@ public class UserDaoMySql implements UserDao {
     String sql = "select \n"
         + "u.id,\n"
         + "u.password,\n"
-        + "u.name\n"
+        + "u.name,\n"
+        + "u.phone\n"
         + "from siacdm.user u";
     MySqlQuery query = new MySqlQuery(sql,
         (u) -> {
@@ -41,6 +42,7 @@ public class UserDaoMySql implements UserDao {
           user.setUserId(u.getString("id"));
           user.setPassword(u.getString("password"));
           user.setFullName(u.getString("name"));
+          user.setPhone(u.getString("phone"));
           return user;
         });
     return query.findAll();
@@ -85,7 +87,8 @@ public class UserDaoMySql implements UserDao {
     String sql = "Select\n"
         + "u.id,\n"
         + "u.password,\n"
-        + "u.name\n"
+        + "u.name,\n"
+        + "u.phone\n"
         + "from\n"
         + "siacdm.user u\n"
         + "where (u.id = ?)";
@@ -98,6 +101,7 @@ public class UserDaoMySql implements UserDao {
           user.setUserId(r.getString("id"));
           user.setPassword(r.getString("password"));
           user.setFullName(r.getString("name"));
+          user.setPhone(r.getString("phone"));
           return user;
         });
     return query.findOne();
@@ -125,12 +129,13 @@ public class UserDaoMySql implements UserDao {
 
   @Override
   public User createUser(User newRecord) {
-    String sql = "insert into siacdm.user (id, password, name) values (?,?,?)";
+    String sql = "insert into siacdm.user (id, password, name, phone) values (?,?,?,?)";
     MySqlQuery query = new MySqlQuery(sql,
         (c) -> {
           c.setString(1, newRecord.getUserId());
           c.setString(2, newRecord.getPassword());
           c.setString(3, newRecord.getFullName());
+          c.setString(4, newRecord.getPhone());
         });
     query.update(newRecord);
     createRole(newRecord);
@@ -157,12 +162,13 @@ public class UserDaoMySql implements UserDao {
 
   @Override
   public User updateUser(User newRecord) {
-    String sql = "update siacdm.user set password = ?, name = ? where (id = ? )";
+    String sql = "update siacdm.user set password = ?, name = ?, phone = ? where (id = ? )";
     MySqlQuery query = new MySqlQuery(sql,
         (s) -> {
           s.setString(1, newRecord.getPassword());
           s.setString(2, newRecord.getFullName());
-          s.setString(3, newRecord.getUserId());
+          s.setString(3, newRecord.getPhone());
+          s.setString(4, newRecord.getUserId());
         });
     query.update(newRecord);
     updateRole(newRecord);
@@ -219,6 +225,7 @@ public class UserDaoMySql implements UserDao {
           user.setUserId(m.getString("id"));
           user.setPassword(m.getString("password"));
           user.setFullName(m.getString("name"));
+          user.setPhone(m.getString("phone"));
           return user;
         });
     return query.findOne();

@@ -58,6 +58,7 @@ public class UserDaoMySqlTest {
         assertEquals(dummy.getUserId(), user.getUserId());
         assertEquals(dummy.getPassword(), user.getPassword());
         assertEquals(dummy.getFullName(), user.getFullName());
+        assertEquals(dummy.getPhone(), user.getPhone());
         assertEquals(dummy.getRoles().size(), user.getRoles().size());
     }
     
@@ -71,6 +72,7 @@ public class UserDaoMySqlTest {
         assertEquals(dummy.getUserId(), user.getUserId());
         assertEquals(dummy.getPassword(), user.getPassword());
         assertEquals(dummy.getFullName(), user.getFullName());
+        assertEquals(dummy.getPhone(), user.getPhone());
         assertEquals(dummy.getRoles().size(),user.getRoles().size());
     }
     
@@ -86,6 +88,7 @@ public class UserDaoMySqlTest {
         roles.add(role2);
         expected.setPassword("new_Password");
         expected.setFullName("new_Name");
+        expected.setPhone("87654321");
         expected.setRoles(roles);
         UserDaoMySql dao = new UserDaoMySql();
         dao.updateUser(expected);
@@ -94,6 +97,7 @@ public class UserDaoMySqlTest {
         assertEquals(expected.getUserId(), user.getUserId());
         assertEquals(expected.getPassword(), user.getPassword());
         assertEquals(expected.getFullName(), user.getFullName());
+        assertEquals(dummy.getPhone(), user.getPhone());
         assertEquals(expected.getRoles().size(), user.getRoles().size());
         List<Role> userRoles = user.getRoles();
         userRoles.forEach(m-> {                    
@@ -111,8 +115,8 @@ public class UserDaoMySqlTest {
     
     private static User createDummyData() {
         String createSql = "insert into siacdm.user "
-                            + "(id, password, name) "
-                            + "values ('dummy','dummy password','dummy name')";
+                            + "(id, password, name, phone) "
+                            + "values ('dummy','dummy password','dummy name', '12345678')";
         MySqlQuery query = new MySqlQuery(createSql);
         query.update();
         String createSqlForRoles = "insert into \n" +
@@ -122,7 +126,7 @@ public class UserDaoMySqlTest {
                                 "('dummy','admin','system');";      
         MySqlQuery query2 = new MySqlQuery(createSqlForRoles);
         query2.update();
-        String Selectsql = "select id,password,name \n" +
+        String Selectsql = "select id,password,name,phone \n" +
                             "from siacdm.user\n" +
                             "where id='dummy'";
         query = new MySqlQuery(Selectsql, 
@@ -131,6 +135,7 @@ public class UserDaoMySqlTest {
                    user.setUserId(u.getString("id"));
                    user.setPassword(u.getString("password"));
                    user.setFullName(u.getString("name"));
+                   user.setPhone(u.getString("phone"));
                    return user;
                 });
         User user = query.findOne();

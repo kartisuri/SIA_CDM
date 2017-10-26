@@ -13,6 +13,7 @@ public class User {
   private String userId;
   private String fullName;
   private String password;
+  private String phone;
   private List<Role> roles;
   private int assignedSlot;
   private boolean authenticated;
@@ -22,6 +23,14 @@ public class User {
       roles = new ArrayList<>();
     }
     return roles;
+  }
+
+  public String getPhone() {
+    return phone;
+  }
+
+  public void setPhone(String phone) {
+    this.phone = phone;
   }
 
   public void setRoles(List<Role> roles) {
@@ -73,6 +82,7 @@ public class User {
     json.put("userId", getUserId());
     json.put("fullName", getFullName());
     json.put("password", getPassword());
+    json.put("phone", getPhone());
     json.put("authenticated", isAuthenticated());
     return json;
   }
@@ -83,6 +93,7 @@ public class User {
     json.put("fullName", getFullName());
     json.put("password", getPassword());
     json.put("authenticated", isAuthenticated());
+    json.put("phone", getPhone());
     json.put("slots", getAssignedSlot());
     JSONArray roles = new JSONArray();
     for (Role r : getRoles()) {
@@ -97,6 +108,7 @@ public class User {
     u.setUserId(json.getString("userId"));
     u.setFullName(json.getString("fullName"));
     u.setPassword(json.getString("password"));
+    u.setPhone(json.getString("phone"));
     u.setAuthenticated(json.getBoolean("authenticated"));
     if (json.has("slots"))
       u.setAssignedSlot(json.getInt("slots"));

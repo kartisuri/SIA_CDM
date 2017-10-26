@@ -110,6 +110,7 @@ CREATE TABLE `user` (
   `id` varchar(40) NOT NULL,
   `password` varchar(45) DEFAULT NULL,
   `name` varchar(45) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -121,7 +122,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('gaurav','gaurav','gaurav sharma'),('vipul','vipul','vipul zambre'),('karthik','karthik','karthik suriyan'),('rachel','rachel','rachel raj'),('admin','admin','administator');
+INSERT INTO `user` VALUES ('gaurav','gaurav','gaurav sharma', '90373886'),('vipul','vipul','vipul zambre', '90746618'),('karthik','karthik','karthik suriyan', '82002942'),('rachel','rachel','rachel raj', '81878660'),('admin','admin','administator', '82002942');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 

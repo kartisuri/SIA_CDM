@@ -7,9 +7,18 @@ public class User {
     private String userId;
     private String password;
     private String fullName;
+    private String phone;
     private List<Role> roles;
     private boolean authenticated;
     private int slots;
+    
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getUserId() {
         return userId;
