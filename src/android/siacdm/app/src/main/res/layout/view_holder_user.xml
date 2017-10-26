@@ -1,0 +1,61 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="3">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <TextView
+        android:id="@+id/user_ID"
+        android:layout_column="0"
+        android:layout_gravity="left"
+        android:layout_row="0"
+        android:text="Murali"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|left"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_column="0"
+        android:layout_gravity="left"
+        android:layout_row="1"
+        android:text="murali"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|left"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/slot_count_user"
+        android:layout_column="1"
+        android:layout_gravity="right|center"
+        android:layout_row="0"
+        android:text="99"
+        android:padding="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_margin="5dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/rounded_rectangle"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="2"
+        android:background="@android:color/darker_gray">
+
+    </LinearLayout>
+
+</GridLayout>

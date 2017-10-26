@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_menu_home"
+        android:title="Home"/>
+
+    <item
+      android:id="@+id/nav_my_profile"
+      android:icon="@drawable/ic_menu_myprofile"
+      android:title="My Profile" />
+
+    <item
+        android:id="@+id/nav_schedules"
+        android:icon="@drawable/ic_menu_schedules"
+        android:title="Schedules"/>
+
+    <item
+        android:id="@+id/nav_tasks"
+        android:icon="@drawable/ic_menu_tasks"
+        android:title="Tasks"/>
+
+    <item
+        android:id="@+id/nav_users"
+        android:icon="@drawable/ic_menu_users"
+        android:title="Users"/>
+
+    <item
+        android:id="@+id/nav_signout"
+        android:icon="@drawable/ic_menu_lock"
+        android:title="@string/action_sign_out" />
+
+</menu>

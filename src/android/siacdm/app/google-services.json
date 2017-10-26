@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "359896086106",
+    "firebase_url": "https://siacdm-92c41.firebaseio.com",
+    "project_id": "siacdm-92c41",
+    "storage_bucket": "siacdm-92c41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359896086106:android:387911d8cbd4f360",
+        "android_client_info": {
+          "package_name": "sg.edu.nus.iss.ft08.siacdm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359896086106-lqb12hu0km658i2cn8u7dsq41sdacgvn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sg.edu.nus.iss.ft08.siacdm",
+            "certificate_hash": "e3dd99cd8ad4d21aac27979ed895f5af51df3078"
+          }
+        },
+        {
+          "client_id": "359896086106-v5mn0acc7bkk1il6dmq8s2oa5fdqqanp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV-r3fq6HNZFztIwmWJXRypp42hk893ug"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359896086106-v5mn0acc7bkk1il6dmq8s2oa5fdqqanp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
