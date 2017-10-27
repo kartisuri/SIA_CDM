@@ -3,6 +3,7 @@ package sg.edu.nus.iss.ft08.siacdm.schedule;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.GravityCompat;
@@ -232,6 +233,11 @@ public class ScheduleDetailActivity extends SiaCdmBaseActivity implements
     if (id == R.id.action_photo) {
       Intent captureIntent = new Intent(this,CaptureActivity.class);
       this.startActivity(captureIntent);
+      return true;
+    }
+    if (id == R.id.action_map) {
+      Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:1.292340,103.775766?q=1.292340,103.775766(technician)"));
+      this.startActivity(intent);
       return true;
     }
 
