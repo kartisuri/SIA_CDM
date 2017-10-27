@@ -2,13 +2,14 @@ package sg.edu.nus.iss.ft08.siacdm.schedule;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -24,8 +25,8 @@ import java.util.List;
 import java.util.Locale;
 
 import sg.edu.nus.iss.ft08.siacdm.ControlFactory;
-import sg.edu.nus.iss.ft08.siacdm.SiaCdmBaseActivity;
 import sg.edu.nus.iss.ft08.siacdm.R;
+import sg.edu.nus.iss.ft08.siacdm.SiaCdmBaseActivity;
 import sg.edu.nus.iss.ft08.siacdm.model.Schedule;
 import sg.edu.nus.iss.ft08.siacdm.model.Task;
 import sg.edu.nus.iss.ft08.siacdm.model.UserRole;
@@ -218,6 +219,21 @@ public class ScheduleDetailActivity extends SiaCdmBaseActivity implements
       copy();
       return true;
     }
+    if (id == R.id.action_chat) {
+      Intent chatIntent = new Intent(this,ChatsActivity.class);
+      this.startActivity(chatIntent);
+      return true;
+    }
+    if (id == R.id.action_call) {
+      Intent chatIntent = new Intent(this,CallActivity.class);
+      this.startActivity(chatIntent);
+      return true;
+    }
+    if (id == R.id.action_photo) {
+      Intent captureIntent = new Intent(this,CaptureActivity.class);
+      this.startActivity(captureIntent);
+      return true;
+    }
 
     return super.onOptionsItemSelected(item);
   }
@@ -365,4 +381,5 @@ public class ScheduleDetailActivity extends SiaCdmBaseActivity implements
     temp.setId(current.getTaskId());
     return tasks.indexOf(temp);
   }
+
 }

@@ -11,6 +11,7 @@
   <uses-permission android:name="android.permission.INTERNET"/>
 
   <user-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.CALL_PHONE" />
 
   <application
       android:allowBackup="true"
@@ -72,6 +73,18 @@
         android:name="sg.edu.nus.iss.ft08.siacdm.user.MyProfileActivity"
         android:label="My Profile"
         android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+    <activity
+        android:name="sg.edu.nus.iss.ft08.siacdm.schedule.ChatsActivity"
+        android:label="Chat">
+    </activity>
+    <activity
+        android:name="sg.edu.nus.iss.ft08.siacdm.schedule.CaptureActivity"
+        android:label="Select/Capture Image">
+    </activity>
+    <activity
+        android:name="sg.edu.nus.iss.ft08.siacdm.schedule.CallActivity"
+        android:label="Make A Call">
     </activity>
   </application>
 

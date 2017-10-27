@@ -3,7 +3,7 @@ package sg.edu.nus.iss.ft08.siacdm;
 import android.net.Uri;
 
 public class Urls {
-    private static final String serverIpAddress = "192.168.43.110";
+    private static final String serverIpAddress = "172.17.250.73";
     private static final String serverPort = "8080";
 
 
