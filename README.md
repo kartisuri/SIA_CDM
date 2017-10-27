@@ -1,5 +1,21 @@
 # SIA_CDM
 
+
+Team Name : Optimus Prime
+
+Members : Gaurav
+		  Kartik
+		  Rachel
+		  Vipul
+
+Business Challenge : Cabin Defect Managment
+
+Fucntionalities : Login
+				  Chat
+				  Call
+				  Create Task
+				  Schedule Page
+
 Login Page
 ![alt text](https://github.com/kartisuri/SIA_CDM/blob/master/src/docs/screenshots/LoginPage.jpg)
 
