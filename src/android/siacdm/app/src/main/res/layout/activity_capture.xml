@@ -15,7 +15,7 @@
       android:textAppearance="?android:attr/textAppearanceLarge"
       android:background="@drawable/rounded_rectangle"
       android:textColor="@color/white"
-      android:text="Select or Capture Image" />
+      android:text="Capture Image" />
 
   <ImageView
       android:layout_width="250dp"
@@ -23,6 +23,6 @@
       android:layout_gravity="center"
       android:layout_marginTop="20dp"
       android:scaleType="fitXY"
-      android:src="@mipmap/ic_launcher"
+      android:src="@drawable/logo_siacdm"
       android:id="@+id/iv"/>
 </LinearLayout>

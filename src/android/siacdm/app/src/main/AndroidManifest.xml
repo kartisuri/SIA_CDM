@@ -52,7 +52,7 @@
     </activity>
     <activity
         android:name="sg.edu.nus.iss.ft08.siacdm.schedule.ScheduleDetailActivity"
-        android:label="Schedule program Detail"
+        android:label="Schedule Detail"
         android:theme="@style/AppTheme.NoActionBar">
     </activity>
     <activity
@@ -66,7 +66,7 @@
     </activity>
     <activity
         android:name="sg.edu.nus.iss.ft08.siacdm.schedule.TaskSchedulesActivity"
-        android:label="Radio Program Schedules"
+        android:label="Task Schedules"
         android:theme="@style/AppTheme.NoActionBar">
     </activity>
     <activity
@@ -80,7 +80,7 @@
     </activity>
     <activity
         android:name="sg.edu.nus.iss.ft08.siacdm.schedule.CaptureActivity"
-        android:label="Select/Capture Image">
+        android:label="Capture Image">
     </activity>
     <activity
         android:name="sg.edu.nus.iss.ft08.siacdm.schedule.CallActivity"
